@@ -1,6 +1,6 @@
 {
-  "name": "frontendfp",
   "homepage": "https://Ahmed-Progs.github.io/coursera-frontend-fp",
+  "name": "frontendfp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,11 +17,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -r https://Ahmed-Progs.github.io/coursera-frontend-fp" ,
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://github.com/Ahmed-Progs/coursera-frontend-fp.git"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
