@@ -2,13 +2,13 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./sections/landingPage";
 import BookingPage from "./reservaTable/bookingPage";
 import ConfirmedBooking from "./reservaTable/confirmedBooking";
-import Navbar from "./sections/header";
+import Nav from "./sections/nav";  // renamed for clarity
 import Footer from "./sections/footer";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Nav />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/reserve" element={<BookingPage />} />
