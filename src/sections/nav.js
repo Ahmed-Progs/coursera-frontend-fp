@@ -8,29 +8,25 @@ function Nav() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Smooth scroll to a section
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
-  // Click handler for nav links that scroll to sections
   const handleNavClick = (sectionId) => {
     setIsOpen(false);
-    navigate("/"); // navigate to home first
-    setTimeout(() => scrollToSection(sectionId), 200); // delay ensures the section exists
+
+    if (window.location.pathname !== "/") {
+      // navigate home and pass sectionId in state
+      navigate("/", { state: { scrollTo: sectionId } });
+    } else {
+      // already on home, scroll immediately
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="logo" onClick={() => navigate("/")}>
         <img src={logo} alt="Logo" />
       </div>
 
-      {/* Nav links */}
       <ul className={`nav-list ${isOpen ? "open" : ""}`}>
         <li onClick={() => navigate("/")} className="nav-item">Home</li>
         <li onClick={() => handleNavClick("about")} className="nav-item">About</li>
@@ -40,7 +36,6 @@ function Nav() {
         <li onClick={() => navigate("/login")} className="nav-item">Login</li>
       </ul>
 
-      {/* Hamburger for mobile */}
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         <img src={hamburgerIcon} alt="Menu" />
       </div>
