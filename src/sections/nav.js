@@ -5,40 +5,47 @@ import logo from "../assets/logo.png";
 import "./nav.css";
 
 function Nav() {
-    const navigate = useNavigate();
-    const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
-    const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-        if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
+  // Smooth scroll to a section
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
-    const handleNavClick = (sectionId) => {
-        setIsOpen(false);
-        navigate("/"); // always go to home first
-        setTimeout(() => scrollToSection(sectionId), 200); // slight delay for render
-    };
+  // Click handler for nav links that scroll to sections
+  const handleNavClick = (sectionId) => {
+    setIsOpen(false);
+    navigate("/"); // navigate to home first
+    setTimeout(() => scrollToSection(sectionId), 200); // delay ensures the section exists
+  };
 
-    return (
-        <nav className="navbar">
-            <div className="logo" onClick={() => navigate("/")}>
-                <img src={logo} alt="Logo" />
-            </div>
+  return (
+    <nav className="navbar">
+      {/* Logo */}
+      <div className="logo" onClick={() => navigate("/")}>
+        <img src={logo} alt="Logo" />
+      </div>
 
-            <ul className={`nav-list ${isOpen ? "open" : ""}`}>
-                <li onClick={() => navigate("/")} className="nav-item">Home</li>
-                <li onClick={() => handleNavClick("about")} className="nav-item">About</li>
-                <li onClick={() => handleNavClick("specials")} className="nav-item">Menu</li>
-                <li onClick={() => handleNavClick("hero")} className="nav-item">Reservations</li>
-                <li onClick={() => handleNavClick("specials")} className="nav-item">Order Online</li>
-                <li onClick={() => navigate("/login")} className="nav-item">Login</li>
-            </ul>
+      {/* Nav links */}
+      <ul className={`nav-list ${isOpen ? "open" : ""}`}>
+        <li onClick={() => navigate("/")} className="nav-item">Home</li>
+        <li onClick={() => handleNavClick("about")} className="nav-item">About</li>
+        <li onClick={() => handleNavClick("specials")} className="nav-item">Menu</li>
+        <li onClick={() => handleNavClick("hero")} className="nav-item">Reservations</li>
+        <li onClick={() => handleNavClick("specials")} className="nav-item">Order Online</li>
+        <li onClick={() => navigate("/login")} className="nav-item">Login</li>
+      </ul>
 
-            <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-                <img src={hamburgerIcon} alt="Menu" />
-            </div>
-        </nav>
-    );
+      {/* Hamburger for mobile */}
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        <img src={hamburgerIcon} alt="Menu" />
+      </div>
+    </nav>
+  );
 }
 
 export default Nav;
