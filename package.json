@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://Ahmed-Progs.github.io/coursera-frontend-fp" ,
+    "deploy": "gh-pages -d build -r https://Ahmed-Progs.github.io/coursera-frontend-fp.git" ,
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
