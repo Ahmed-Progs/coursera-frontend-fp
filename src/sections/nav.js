@@ -15,32 +15,25 @@ function Nav() {
 
     const handleNavClick = (sectionId) => {
         setIsOpen(false);
-        if (window.location.pathname !== "/") {
-            navigate("/");
-            setTimeout(() => scrollToSection(sectionId), 150);
-        } else {
-            scrollToSection(sectionId);
-        }
+        navigate("/"); // always go to home first
+        setTimeout(() => scrollToSection(sectionId), 200); // slight delay for render
     };
 
     return (
         <nav className="navbar">
-            {/* Logo */}
             <div className="logo" onClick={() => navigate("/")}>
                 <img src={logo} alt="Logo" />
             </div>
 
-            {/* Desktop nav items */}
             <ul className={`nav-list ${isOpen ? "open" : ""}`}>
-                <li onClick={() => { setIsOpen(false); navigate("/"); }} className="nav-item">Home</li>
+                <li onClick={() => navigate("/")} className="nav-item">Home</li>
                 <li onClick={() => handleNavClick("about")} className="nav-item">About</li>
                 <li onClick={() => handleNavClick("specials")} className="nav-item">Menu</li>
                 <li onClick={() => handleNavClick("hero")} className="nav-item">Reservations</li>
                 <li onClick={() => handleNavClick("specials")} className="nav-item">Order Online</li>
-                <li onClick={() => { setIsOpen(false); navigate("/login"); }} className="nav-item">Login</li>
+                <li onClick={() => navigate("/login")} className="nav-item">Login</li>
             </ul>
 
-            {/* Hamburger */}
             <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
                 <img src={hamburgerIcon} alt="Menu" />
             </div>
