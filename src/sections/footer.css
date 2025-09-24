@@ -1,0 +1,81 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4a5c56;
+    color: white;
+    padding: 40px 80px;
+    font-family: Arial, sans-serif;
+    min-height: auto; /* ✅ remove fixed height */
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px; /* spacing between columns */
+    flex-wrap: wrap; /* ✅ allows wrapping on smaller screens */
+    width: 100%;
+    max-width: 1200px; /* keeps it neat on big screens */
+}
+
+.footer-logo img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.foot > div {
+    min-width: 150px; /* prevents too much squishing */
+    flex: 1; /* ✅ columns grow/shrink evenly */
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    margin: 5px 0;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #d4d4d4;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+/* ✅ Responsive behavior */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px; /* reduce padding */
+        text-align: center;
+    }
+
+    .foot {
+        flex-direction: column; /* stack items vertically */
+        align-items: center;
+        gap: 20px; /* smaller gap for mobile */
+    }
+
+    .foot > div {
+        min-width: unset; /* remove forced width */
+        flex: unset;
+    }
+
+    .footer-logo img {
+        max-width: 80px; /* shrink logo */
+    }
+
+    .footer-nav ul li a {
+        font-size: 0.9rem;
+    }
+}

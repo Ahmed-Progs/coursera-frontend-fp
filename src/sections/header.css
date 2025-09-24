@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* centers content horizontally */
+    gap: 40px;
+    /* space between logo and nav */
+    padding: 20px;
+    background-color: #fff;
+    /* adjust if you want a background */
+}
+
+header img {
+    display: block;
+}

@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./sections/landingPage";         // Hero, About, Specials sections included here
+import BookingPage from "./reservaTable/bookingPage"; // wrapper for BookingForm
+import ConfirmedBooking from "./reservaTable/confirmedBooking";
+import Navbar from "./sections/header";
+import Footer from "./sections/footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar /> {/* Navbar visible on all pages */}
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/reserve" element={<BookingPage />} />
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
+      </Routes>
+      <Footer /> {/* Footer visible on all pages */}
+    </Router>
   );
 }
 

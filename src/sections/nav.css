@@ -1,0 +1,74 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* logo left, hamburger/right nav */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Desktop nav list */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f4ce14;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .nav-list {
+        display: none; /* hide desktop nav */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 180px;
+        text-align: right;
+        gap: 15px;
+    }
+
+    .nav-list.open {
+        display: flex; /* dropdown visible */
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: auto; /* push hamburger to right */
+    }
+}

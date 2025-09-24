@@ -1,0 +1,120 @@
+/* Specials Section */
+.specials {
+    padding: 3rem 2rem;
+    background-color: #f8f8f8;
+    text-align: center;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.specials h2 {
+    font-family: 'Markazi Medium';
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.heads {
+    display: flex;
+    justify-content: space-between; /* heading left, button right */
+    align-items: center;
+}
+
+.specials button {
+    background-color: #f4ce14;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.specials button:hover {
+    background-color: #e0b800;
+}
+/* Card Container */
+.specials-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Each Card */
+.specials-cards article {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.specials-cards article:hover {
+    transform: translateY(-6px);
+}
+
+/* Images */
+.specials-cards img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/* Title + Price */
+.specials-cards h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: #222;
+    display: inline-block;
+}
+
+.price {
+    float: right;
+    font-weight: bold;
+    color: #e63946;
+    font-size: 1rem;
+}
+
+/* Description */
+.specials-cards p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0.75rem 0 1rem;
+    flex-grow: 1;
+}
+
+/* Order Link */
+.order-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    background: #f4ce14;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.order-link:hover {
+    background: #e6ba0d;
+}
+
+.delivery-icon {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 30px !important;
+    height: 30px !important;
+    display: inline-block;
+    vertical-align: middle;
+}
