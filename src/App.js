@@ -1,8 +1,8 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import LandingPage from "./sections/landingPage";
 import BookingPage from "./reservaTable/bookingPage";
 import ConfirmedBooking from "./reservaTable/confirmedBooking";
-import Nav from "./sections/nav";  // navbar
+import Nav from "./sections/nav";  // renamed for clarity
 import Footer from "./sections/footer";
 
 function App() {
