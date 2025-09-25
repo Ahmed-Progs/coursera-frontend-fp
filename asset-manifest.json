@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/coursera-frontend-fp/static/css/main.1e70dda3.css",
-    "main.js": "/coursera-frontend-fp/static/js/main.c6b4386b.js",
+    "main.css": "/coursera-frontend-fp/static/css/main.2d7cf06a.css",
+    "main.js": "/coursera-frontend-fp/static/js/main.b9cc87de.js",
     "static/js/453.cc53522b.chunk.js": "/coursera-frontend-fp/static/js/453.cc53522b.chunk.js",
     "static/media/Mario and Adrian A.jpg": "/coursera-frontend-fp/static/media/Mario and Adrian A.7f44c6d6e341a27d14b3.jpg",
     "static/media/Mario and Adrian b.jpg": "/coursera-frontend-fp/static/media/Mario and Adrian b.6ba0e06bfa9c1ea75109.jpg",
@@ -10,18 +10,17 @@
     "static/media/restaurant.jpg": "/coursera-frontend-fp/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
     "static/media/customer1.jpeg": "/coursera-frontend-fp/static/media/customer1.b4693ef3f44e701f2c26.jpeg",
     "static/media/customer3.jpeg": "/coursera-frontend-fp/static/media/customer3.cd0f0595200238c518ad.jpeg",
-    "static/media/logo.svg": "/coursera-frontend-fp/static/media/logo.f72c913c48c5334f78f2c336ec36f22b.svg",
     "static/media/customer2.jpeg": "/coursera-frontend-fp/static/media/customer2.1152e571d8034180ae83.jpeg",
     "static/media/logo.png": "/coursera-frontend-fp/static/media/logo.d4cae6fac8384c2dae04.png",
     "static/media/motorbike.png": "/coursera-frontend-fp/static/media/motorbike.d457dbde78006a4a9e0c.png",
     "index.html": "/coursera-frontend-fp/index.html",
-    "static/media/hamburgermenu.svg": "/coursera-frontend-fp/static/media/hamburgermenu.0da6f67ced800ab909f63d5144de37ee.svg",
-    "main.1e70dda3.css.map": "/coursera-frontend-fp/static/css/main.1e70dda3.css.map",
-    "main.c6b4386b.js.map": "/coursera-frontend-fp/static/js/main.c6b4386b.js.map",
+    "static/media/hamburgermenu.svg": "/coursera-frontend-fp/static/media/hamburgermenu.2cba90d9a2294d6ec4901bf28d25c693.svg",
+    "main.2d7cf06a.css.map": "/coursera-frontend-fp/static/css/main.2d7cf06a.css.map",
+    "main.b9cc87de.js.map": "/coursera-frontend-fp/static/js/main.b9cc87de.js.map",
     "453.cc53522b.chunk.js.map": "/coursera-frontend-fp/static/js/453.cc53522b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e70dda3.css",
-    "static/js/main.c6b4386b.js"
+    "static/css/main.2d7cf06a.css",
+    "static/js/main.b9cc87de.js"
   ]
 }
